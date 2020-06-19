@@ -35,7 +35,7 @@
                         
             // 鼠标离开整个区域时继续播放至下一张
             wrap.onmouseout = function () {
-                timer = autoPlay;
+                timer = setInterval(autoPlay, 2000);
             }
 
             // 遍历所有编号实现划过切换至对应的图片
