@@ -1,0 +1,376 @@
+/* 更改默认样式 */
+body,h1,h2,h3,h4,h5,h6,ol,ul,dl,dd,p,input,select,textarea,td{/*设置这些属性的页外边距和页内边距均为0*/
+	margin:0;
+	padding:0;
+}
+
+/* 设置p标签样式  */
+p{
+    margin:0px;
+    padding:0px;
+}
+/* 设置a标签样式 */
+a:link,a:hover, a:visited{
+    color: black;
+    text-decoration:  none;
+    /* border-bottom:    thin dotted #b76666; */
+}
+a:hover,a:active{
+    color: purple;/*鼠标悬停为紫色*/
+    font-weight: bold;
+}
+
+body {
+    /* 设置一张有纹理质感的背景图 */
+    background-image: url(../images/bg.png);
+    margin: 0;
+    font:12px/1 "\u5b8b\u4f53", Verdana,Helvetica,Arial, sans-serif;
+}
+
+div.inner { /*实现凝胶布局的关键代码*/
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 页眉区的CSS */
+header{
+    height: 100px;
+}
+
+header div.inner{
+    height: 100px;
+    background-color:rgb(224, 185, 185) ;
+}
+/* 头像与网站名称 */
+header div.inner #profile{
+    width: 500px;
+    height: 100px;
+    float:left;
+}
+/* 头像 */
+header div.inner #profile img.pro{
+    float:left;/*若不设置此行，则网站名称无法显示在头像右边*/
+    display:block;/*初始时显示*/
+    margin: 6px;
+    margin-left: 40px;
+    /*让头像显示成圆形*/
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+    border:3px solid rgb(172, 208, 243);/*给头像设置边框*/
+}
+
+header div.inner #profile img.pro2{
+    float:left;
+    display:none;/*初始时不显示*/
+    margin: 6px;
+    margin-left: 40.5px;/*第二张图较第一张图片更偏右*/
+    /*让头像显示成圆形*/
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+    border:3px solid rgb(172, 208, 243);/*给头像设置边框*/
+}
+/* 网站名称 */
+header div.inner #profile p{
+    font-weight:200;
+    font-size:2.8em;
+    margin-top:30px;
+    float:left;
+}
+/* 给网站名称添加伪类 */
+header div.inner #profile p:hover{
+    color: rgb(146, 134, 218);
+}
+
+/* 座右铭 */
+header div.inner #motto{
+    width: 500px;
+    height: 100px;
+    float:left;
+    text-align: right;/*文本右居中*/
+    
+}
+/* 英文座右铭 */
+header div.inner #motto p.english{
+    font-size:1.5em;
+    font-family: Harrington;
+    height: 45px;
+    margin: 10px 40px 0px ;/*覆盖p标签的原有样式*/
+}
+/* 中文座右铭 */
+header div.inner #motto p.chinese{
+    font-family: Simaun;
+    margin: 5px 40px 0px ;
+}
+/* 给座右铭添加伪类 */
+header div.inner #motto p.english:hover{
+    font-size:2em;
+}
+header div.inner #motto p.english:hover ,header div.inner #motto p.chinese:hover{/*注意要给逗号前，逗号后各加一个：hover*/
+    color: rgb(146, 134, 218);
+}
+
+
+/* 导航 */
+nav{
+    margin:5px auto;
+    height: 40px;
+    margin-bottom: 15px;
+    
+}
+
+nav div.inner{
+    height: 40px;/*这一行代码必须写，否则.inner对应的这块div只有宽度没有高度，无法显示出来*/
+    background-color:rgb(229, 199, 162) ;
+   
+}
+
+nav ul{
+    padding: 0px; /* 与内部元素的距离为0 */
+    height:40px;
+    list-style-type: none;/*去除列表标记*/
+    
+}
+
+nav ul li{
+    float:left; /* 将竖排变为横排 */
+    /*
+    值得注意的是，此处利用设置宽高来使导航文本均匀分布
+    若使用display:inline;也可以使得导航位于一横排，但是无法设置它的宽高，因为它变成了内联元素
+    */
+    height:40px;
+    width:250px;/*列表项的宽度与高度*/
+    text-align:center;
+    line-height:40px;/*上下左右居中*/
+    font-size: large;
+}
+
+nav ul li a:visited,nav ul li a:link{
+	color: #702a2a;
+ 
+    font-weight: bold;
+}
+nav ul li.selected {
+    background-color: #d3ad75;
+}
+nav ul li:hover{
+	background-color:#d1b387;
+}
+
+/* 采用表格布局,需要注意的是，表格布局时上下div的高度不会折叠 */
+div.tableContainer{
+    display: table;
+    /* border-spacing: 10px; */
+}
+
+div.tableRow{
+    display: table-row;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+div.tableCell{
+    display: table-cell;
+    vertical-align: top;
+}
+/* 内容区，为表格布局 */
+div.inner-container{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.container div.about{
+    width:250px;
+    height: 600px;
+    border:2px solid rgb(181,167,137);
+    background-color: rgb(239,229,208);
+    /* border-radius: 10px; */
+}
+
+div.container div.connect{
+    width:750px;
+    height: 600px;
+    border:2px solid rgb(181,167,137);
+    background-color: rgb(239,229,208);
+    /* border-radius: 10px; */
+}
+
+/* 左侧基本信息区 */
+/* 基本信息的边栏 */
+div.container div.about div.bd{
+    background-color: rgb(62, 73, 88);
+    /* 一定要写出宽高，不写宽度div无法显示 */
+    width: 25px;
+    
+    height: 1200px;
+    float:left;
+}
+/* 基本信息 */
+div.container div.about div.basic{
+    /* background-color:rgb(242,242,242); */
+    width: 224px;
+    height: 600px;
+    float:left;
+}
+
+/* 头像及署名 */
+div.container div.about div.basic div.prof{
+    width: 100%;
+    height:140px;
+    /* background-color: lime; */
+    text-align: center;/*让照片居中*/
+    padding-top: 15px;/*让照片靠下一点*/
+}
+/* 头像 */
+div.container div.about div.basic div.prof img{
+    /* 给照片设置圆角 */
+    border-radius: 10%;
+    /* 给照片设置阴影 */
+    box-shadow: 10px 10px 10px rgba(0,0,0,.5);
+    /*考虑浏览器兼容性*/
+    -moz-box-shadow: 10px 10px 10px rgba(0,0,0,.5);
+    -webkit-box-shadow: 10px 10px 10px rgba(0,0,0,.5);
+}
+
+/* 署名 */
+div.container div.about div.basic div.prof h1{
+    margin-top: 20px;
+    font-weight: normal;
+}
+
+/* 对应基本信息的一条条显示（表格布局） */
+div.container div.about div.basic table{
+    margin-top:100px;
+    border-spacing: 5px;
+    border-collapse:collapse;/*没有这句话，表格的边框线无法显示出来*/
+    width: 100%;/*保证表格一行的宽度占满外侧*/
+    /* background-color: magenta; */
+
+}
+
+div.container div.about div.basic table tr{
+    height: 30px;
+    border-bottom: 2px solid white;
+    margin-bottom: 10px;
+}
+
+/* 基本信息的小图标 */
+div.container div.about div.basic table tr td img.desp{
+    /* height: 30px; */
+    /* /* width:25%; */
+    text-align: right; 
+    height: 12px;
+    width:15px;
+    margin-left:15px;
+}
+
+/* "生日：""学历："区域 */
+div.container div.about div.basic table tr td.desp{
+    /* height: 30px; */
+    width:25%;
+    text-align: right;
+}
+
+/* 简历内容区 */
+div.container div.connect table{
+    width: 95%;
+    border-collapse: collapse;
+    border-spacing: 20px;
+    margin:10px;
+    font-size: 15px;
+    vertical-align: top;
+    margin-left: 18px;
+}
+
+div.container div.connect table tr{
+    height:40px;
+    vertical-align: top;
+    /* margin-top: 10px; */
+  
+   
+}
+
+
+div.container div.connect table tr.title{
+    border-bottom: 1.5px solid rgb(166,166,166) ;
+}
+
+div.container div.connect table tr.title td{
+    vertical-align: top;
+}
+/* 图标 */
+div.container div.connect table tr.title td.img{
+    /* width: 15%; */
+    width:50px;
+    padding: 5px 5px 2px 0px;
+}
+
+div.container div.connect table tr.title td.img img{
+    float: left;
+    margin:5px 5px 2px 0px;
+}
+/* 图标旁边的标题，如"教育背景" */
+div.container div.connect table tr.title td h1{
+    line-height: 51px;
+    margin-left: 20px;
+    /* width:70%; */
+    float:left;
+    
+}
+
+/* 标题下边的详细内容 */
+div.container div.connect table tr.conte td{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+div.container div.connect table tr.conte td.desp{
+    /* 设置字体的上下左右间距 */
+    letter-spacing: 1px;
+    line-height: 20px;
+}
+/* 设置类别区（如"志愿服务类"）的样式 */
+div.container div.connect table tr.conte td.category{
+    font-weight: bold;
+    padding-left: 70px;/*表格内部不能设置margin*/
+    
+    
+}
+
+/* 设置时间线区域（如"2019.07-- 2019.08"）的样式 */
+div.container div.connect table tr.conte td.timeline{
+    font-weight: bold;
+    width: 35%;/*!!待定*/
+    /* background-color: mediumseagreen; */
+    
+}
+
+/* 设置简历中有序列表样式 */
+div.container div.connect table tr.conte td.desp_p ol{
+    margin-left: 22px;
+    /* background-color: mediumturquoise; */
+}
+
+/* 设置一点样式，碰到h1标签对应内容时会字体会变化 */
+h1:hover{
+    color: purple;/*鼠标悬停为紫色*/
+    font-weight: bold;
+}
+
+/* 页脚 */
+footer{
+    margin-top: 15px;
+    height: 45px;
+    
+}
+
+footer div.inner{
+    margin:0px auto 10px auto;
+    height: 45px;/*这一行代码必须写，否则.inner对应的这块div只有宽度没有高度，无法显示出来*/
+    background-color:rgb(224, 185, 185) ;
+    text-align: center;/*文字水平居中*/
+    line-height: 45px;/*文字竖直居中*/
+
+}

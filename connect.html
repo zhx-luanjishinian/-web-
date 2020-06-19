@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>与我联系</title>
+    <link rel="stylesheet" href="./css/connect.css">
+
+     <!-- 主要用来实现头像的简单切换 -->
+     <script type="text/javascript">
+        function swap(val){
+        　　if(val=="pro"){
+        　　　　pro.style.display='block';//设置为显示
+        　　　　pro2.style.display='none';//设置为隐藏
+        　　}else if(val=="pro2"){
+            　 pro.style.display='none';
+        　　　  pro2.style.display='block';
+        　　}
+        }
+        window.onload=function(){
+            // 对变量名称初始化
+            var wrap=document.getElementById('adult'),
+            pic=document.getElementById('adultpic').getElementsByTagName("li"),
+            list=document.getElementById('indexlist').getElementsByTagName('li'),
+            index=0,
+            timer=null;
+                        
+            // 调用自动播放函数，2s自动播放一次
+            timer = setInterval(autoPlay, 2000);
+                        
+            // 鼠标划过整个区域时停止自动播放
+            wrap.onmouseover = function () {
+            clearInterval(timer);
+            }
+                        
+            // 鼠标离开整个区域时继续播放至下一张
+            wrap.onmouseout = function () {
+                timer = autoPlay;
+            }
+
+            // 遍历所有编号实现划过切换至对应的图片
+            for (var i = 0; i < list.length; i++) {
+                list[i].onmouseover = function () {
+                clearInterval(timer);
+                index = this.innerText - 1;
+                changePic(index);
+                };
+            };
+            // 自动播放
+            function autoPlay () {
+                if (++index >= pic.length) index = 0;
+                changePic(index);
+            }
+                        
+            // 图片切换
+            function changePic (curIndex) {
+                for (var i = 0; i < pic.length; ++i) {
+                    pic[i].style.display = "none";
+                    list[i].className = "";
+                }
+                pic[curIndex].style.display = "block";
+                list[curIndex].className = "on";
+            }
+                        
+        }      
+    </script>
+</head>
+<body>
+     <!-- 页眉区，用来放置头像与座右铭 -->
+     <header>
+        <div class="inner">
+            <!-- 头像以及名称 -->
+            <div id="profile">
+                <!-- 这里定义了js实现头像的简单切换 -->
+                <img src="./images/profile.png" alt="" class="pro" id="pro" onmouseover="swap('pro2')" onmoucedown="swap('pro2')" onmouseup="swap('pro2')" onmouseout="swap('pro2')" ondblclick="swap('pro2')" >
+                <img src="./images/profile2.png" alt="" class="pro2" id="pro2" onmouseover="swap('pro')" onmoucedown="swap('pro')" onmouseup="swap('pro')" onmouseout="swap('pro')" ondblclick="swap('pro')" > 
+                <p>昊欣の小站</p>
+            </div>
+            <div id="motto">
+                <p class="english">Of course I won't try to pick the moon. <br/>I want the moon to come to me.</p>
+                <p class="chinese">我当然不会试图摘月，我要月亮奔我而来。</p>
+                <p class="chinese">——奥黛丽·赫本</p>
+            </div>
+        </div>
+    </header>
+    <!-- 导航区，对应四个页面 -->
+    <nav>
+        <div class="inner">
+            <ul class="">
+                <!-- 被选中的一项 -->
+				<li>
+					<a href="index.html" title="我的主页">我的主页</a>
+				</li>
+				<li>
+					<a href="resume.html" title="我的简历">我的简历</a>
+				</li>
+				<li>
+					<a href="life.html" title="我的生活">我的生活</a>
+				</li>
+				<li  class="selected">
+					<a href="connect.html" title="与我联系">与我联系</a>
+				</li>  
+			</ul> 
+
+        </div>
+    </nav>
+    <!-- 内容区，采用表格布局 -->
+    <div class="inner inner-container">
+        <div class="tableContainer container">
+            <div class="tableRow">
+
+                <!-- 左侧关于作者栏 -->
+                <div class="about tableCell">  
+                    <header><span><a href="connect.html">关于作者</a></span></header>
+                    <div class="adult" id='adult'> 
+                        <ul id="adultpic">
+                            <li>
+                                <img src="./images/connect-1.png" alt="">
+                            </li>
+                            <li>
+                                <img src="./images/connect-2.png" alt="">
+                            </li>
+                            <li>
+                                <img src="./images/connect-3.png" alt="">
+                            </li>
+                            <li>
+                                <img src="./images/connect-4.png" alt="">
+                            </li>    
+                        </ul>
+                        <ol id="indexlist">
+                            <li class="on">1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                        </ol>
+                    </div>
+                    <div class="content">
+                        <p>我的名字：郑昊欣</p>
+                        <p>中南财经政法大学 信管1801</p>
+                        <p>追梦少女/数据分析/人工智能</p>
+                        <p>QQ:1291103474</p>
+                        <p><a class="a-underline" target="_blank" href="https://mail.qq.com/cgi-bin/frame_html?sid=doQTVvpv0SXNNXkn&r=890f82f5a56204dcc6820203ca53ae36">
+                            Email</a>:1291103474@qq.com
+                        </p>
+                        <div class="desp">
+                            <p>我是一名大二的学生，专业与计算机编程密切相关。我的爱好是听歌、弹琴、画可爱的卡通人物。我学习了Python、java、C++等后端编程语言，正在学习前端的道路上不断前进着。这是我做的个人网站，我的主页展示了照片和其他页面的概览，我的简历包括我的个人简历，我的生活记录了荆门支教之行、邂逅文澜这两件重要的事，与我联系中写了我的联系方式并附有留言框。欢迎您的光临，网站还有很多可以改进与完善之处，我非常期望得到您的批评指正！
+                            </p>   
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <!-- 右侧的与我联系表单 -->
+                <div class="connect tableCell">
+                    <!-- 该表单嵌套在表格中 -->
+                    <table>
+                        <caption><span><a href="connect.html">您的留言是我不断进步的源源动力！</a></span></caption>
+                        <form>
+                            <tr>
+                                <!-- 表单中的冒号最好都用中文 -->
+                                <td>您的昵称：</td>
+                                <td>
+                                    <input type="text" placeholder="请输入您的昵称" style="font-size:.9em;"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>对本网站的满意程度：</td>
+                                <td class="satisfy">
+                                    <span>0</span><input type="range"><span>100</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>您所属的行业是：</td>
+                                <td>
+                                    <input type="radio" name="work" />前端开发
+                                    <input type="radio" name="work" />后端开发
+                                    <input type="radio" name="work" />其他
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>您最喜欢的网页：</td>
+                                <td>
+                                    <select name="webpage">
+                                        <option value="我的主页">我的主页</option>
+                                        <option value="我的简历">我的简历</option>
+                                        <option value="我的生活">我的生活</option>
+                                        <option value="与我联系">与我联系</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>您认为网站设计的关键之处：</td>
+                                <td>
+                                    <input type="checkbox" name="webkey" />代码简洁
+                                    <input type="checkbox" name="webkey" />页面美观
+                                    <input type="checkbox" name="webkey" />特效充足
+                                    <input type="checkbox" name="webkey" />内容丰富
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>喜爱的网站设计颜色：</td>
+                                <td class="color">
+                                    <input type="color" value="#E0B9B9" />
+                                    <span>(请在左框选择颜色)</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="must">*</span>Email：</td>
+                                <td>
+                                    <input type="email" placeholder="1291103474@qq.com" required/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="must">*</span>留言：</td>
+                                <td>
+                                    <textarea name="comments" rows="12" cols="50" placeholder="可以写上您的建议、评价、期望等等" required></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <span class="submit"><input type="submit" name="submit" id="submit" value="提交"></span>
+                                    <span class="reset"><input type="reset" name="reset" id="reset" value="重置"></span>
+                                </td>
+                            </tr>
+                        </form>
+                    </table>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <footer>
+        <div class="inner">
+            <p>
+                <a href="index.html">
+                Copyright©昊欣の小站 All Rights Reserved.
+                </a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

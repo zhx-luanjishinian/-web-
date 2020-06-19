@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的主页</title>
+    <link rel="stylesheet" href="./css/index.css">
+
+    <!-- 主要用来实现头像的简单切换 -->
+    <script type="text/javascript">
+        function swap(val){
+        　　if(val=="pro"){
+        　　　　pro.style.display='block';//设置为显示
+        　　　　pro2.style.display='none';//设置为隐藏
+        　　}else if(val=="pro2"){
+            　 pro.style.display='none';
+        　　　  pro2.style.display='block';
+        　　}
+        }
+    </script>
+</head>
+<body>
+    <!-- 页眉区，用来放置头像与座右铭 -->
+    <header>
+        <div class="inner">
+            <!-- 头像以及名称 -->
+            <div id="profile">
+                <!-- 这里定义了js实现头像的简单切换 -->
+                <img src="./images/profile.png" alt="" class="pro" id="pro" onmouseover="swap('pro2')" onmoucedown="swap('pro2')" onmouseup="swap('pro2')" onmouseout="swap('pro2')" ondblclick="swap('pro2')" >
+                <img src="./images/profile2.png" alt="" class="pro2" id="pro2" onmouseover="swap('pro')" onmoucedown="swap('pro')" onmouseup="swap('pro')" onmouseout="swap('pro')" ondblclick="swap('pro')" > 
+                <p>昊欣の小站</p>
+            </div>
+            <div id="motto">
+                <p class="english">Of course I won't try to pick the moon. <br/>I want the moon to come to me.</p>
+                <p class="chinese">我当然不会试图摘月，我要月亮奔我而来。</p>
+                <p class="chinese">——奥黛丽·赫本</p>
+            </div>
+        </div>
+    </header>
+    <!-- 导航区，对应四个页面 -->
+    <nav>
+        <div class="inner">
+            <ul class="">
+                <!-- 被选中的一项 -->
+				<li class="selected">
+					<a href="index.html" title="我的主页">我的主页</a>
+				</li>
+				<li>
+					<a href="resume.html" title="我的简历">我的简历</a>
+				</li>
+				<li>
+					<a href="life.html" title="我的生活">我的生活</a>
+				</li>
+				<li>
+					<a href="connect.html" title="与我联系">与我联系</a>
+				</li>  
+			</ul> 
+
+        </div>
+    </nav>
+    <!-- 内容区 -->
+    <div id="container">
+        <div class="inner">
+            <!-- 专门放置相册的地方 -->
+            <section id="album">
+                <!-- 相册区域一行四列，此处采用表格布局 -->
+                <div class="img" id="tableContainer">
+                    <div id="tableRow">
+                        <div id="tableCell"><img src="./images/img-1.png" alt=""></div>
+                        <div id="tableCell"><img src="./images/img-2.png" alt=""></div>
+                        <div id="tableCell"><img src="./images/img-3.png" alt=""></div>
+                        <div id="tableCell"><img src="./images/img-4.png" alt=""></div>
+                    </div>
+                </div>
+            </section>
+
+             <!--对应我的生活页面，展示缩略图，形式类似于微博-->
+             <section id="mylife">
+                <div class="article">
+                    <div class="art-img">
+						<img src="./images/vol.png" />
+					</div>
+					<div class="art-title">
+						<a href="life.html">荆门支教之行</a>
+                    </div>
+                    <div class="art-info">
+						<ul>
+							<li>
+								<a href="life.html">郑昊欣</a>
+							</li>
+							<li>
+								2019-08-05 12:48
+							</li>
+						</ul>
+					</div>
+					<div class="desp">
+                        <p>
+                        怀着复杂的感情，一个月的支教就这样结束了。心中既有终于能回家的欣喜，又有着对于班上可爱乖巧小孩子的恋恋不舍。但时针依旧不留情地划过，归途的高铁像个顽皮的孩子终于回到自己的工作岗位，周遭的景物在飞速地向后撤去，我知道我的支教月最终拉下了帷幕。<br/>
+                        </p>
+                        <p class="headings">一、居住</p>
+                        <p>
+                        和我所设想的艰苦生活不太一样，支教月的生活条件居然出乎意料的好：我们四个老师，虽然同住在一件屋子里，但衣箱、床头柜、温暖的大床、木地板、空调应有尽有。两个老师睡在床上，还有两个老师打地铺。阿姨家给的地铺不亚于日本的榻榻米，睡起来非常舒服。一日…
+                        </p>
+                    </div>
+                </div>
+                <div class="article">
+                    <div class="art-img">
+						<img src="./images/depart.png" />
+					</div>
+					<div class="art-title">
+						<a href="life2.html">邂逅文澜</a>
+                    </div>
+                    <div class="art-info">
+						<ul>
+							<li>
+								<a href="life.html">郑昊欣</a>
+							</li>
+							<li>
+								2020-05-15 23:27
+							</li>
+						</ul>
+					</div>
+					<div class="desp">
+                        <p>
+                        不知不觉，成为文澜网络的一份子已经近两年，我从什么也不懂的萌新成为了大二的师兄师姐，在部门的时光里，我收获了珍贵的友谊，也学会了不少技能。<br/>
+                        </p>
+                        <p class="headings">一、初识</p>
+                        <p>
+                        第一次知道文澜网络，是在成为大一新生的第一周。当时的我，对大学的一切都充满好奇，充满探寻与求知欲，什么都想体验，什么都想尝试。记得招新的时候，面对众多迎新的部门，我犹豫不决。一天下来，手里拿了不少招揽干事的传单，却并不知道自己喜欢什么、参加什么。那天回宿舍，我却被桌上的一张传单吸引了——《文澜网络技术…
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!--左边栏区内容-->
+            <aside>
+                <!-- 搜索框，仅实现页面显示 -->
+                <div id="search" class="aside-item">
+                    <header><p><a href="index.html">搜你想搜</a></p></header>
+                    <div class="aside-container ">
+                        <form>
+                            <input type="text" placeholder="此处仅实现搜索框展示" name="">
+                            <!-- <input type="submit" value=""> -->
+                            
+                            <p class="submit"><button type="submit"></button></p>
+                        </form>
+                    </div>
+                </div>
+                <!-- 关于作者，对应与我联系页面 -->
+                <div id="about" class="aside-item">
+                    <header><p><a href="connect.html">与我联系</a></p></header>
+                    <div class="aside-container">
+                        <div style="height: 80px;">
+                            <div class="adult"> 
+                            </div>
+                            <div class="content">
+                                <a href="connect.html">
+                                    <p>我的名字：郑昊欣</p>
+                                </a>
+                                <p>中南财经政法大学 信管1801</p>
+                                <p>追梦少女/数据分析/人工智能</p>
+                                   
+                            </div>
+                        </div>
+                        <div class="desp">
+                            
+                            <p>我是一名大二的学生，专业与计算机编程密切相关。我的爱好是听歌、弹琴、画可爱的卡通人物。我学习了Python、java、C++等后端…
+                            <!-- 编程语言，正在学习前端的道路上不断前进着。这是我做的个人网站，期待得到您的批评指正！ -->
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- 感悟心语 -->
+                <div id="idea" class="aside-item">  
+                    <header><p>感悟心语</p></header>
+                    <div class="aside-container">
+                        <div class="desp">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;人生是一个不断学习与不断成长的过程。在完成网页设计的过程中，我逐渐了解了div布局的要点，明白了float浮动的特性，并且理解了表格布局与单纯div布局的区别。由于时间仓促，我的web作业仍然存在非常多的细节值得完善，在之后的大学时光里，我会深入学习js,数据库，后端，将这个web网页真正制作成属于自己的独一无二的个人网站！
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </aside>
+
+        </div>
+        
+    </div>
+    
+    <footer>
+        <div class="inner">
+            <p>
+                <a href="index.html">
+                    Copyright©昊欣の小站 All Rights Reserved.
+                </a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>首页</title>
+		<style>
+		 body{
+		 	overflow: hidden;
+		 	height:550px;width:1230px;
+		 	background:rgb(127,0,34);
+		 }
+		 .shaoxiao{
+		 	width:1220px;
+		    height:570px;
+		    margin-top: 18px;
+		 	margin-left:15px;
+		 	background: rgb(213,36,46);}	
+		 .shang1{
+		 	margin-left: 60px;
+		 	font-size:35px ;
+		 	font-family: Harrington;
+		 	height:45px;}
+		 .shang1:hover{color: #FF0000;font-size: 40px;}
+		 .shang2{
+		 	font-size:70px ;
+		 	font-family: Harrington;
+		 	margin-left:70px ;
+		 	height: 80px;
+		 }
+		 .shang2:hover{color: #FF0000;font-size: 80px;}
+		 .soccer{
+		 	width: 720px;
+		 	height: 420px;
+		 	float: left;
+		 }
+		 #toubu:hover{width: 720px;height: 420px;}
+		 #tu{margin-left:0px ;}
+		 .main{float: left;width: 120px;}
+		 .img:hover{width: 110px;height: 110px;}
+		.a{ 
+			line-height: 113px;
+			font-family: Harrington;
+			font-size: 55px;
+	
+		}
+		.b{
+			line-height: 48px;
+			font-family: Harrington;
+			font-size: 55px;
+		}
+		.c{
+			line-height: 112px;
+			font-family: Harrington;
+			font-size: 55px;
+		}
+		.d{
+			line-height: 56px;
+			font-family: Harrington;
+			font-size: 55px;
+		}
+		.a:hover,.b:hover,.c:hover,.d:hover{font-size: 70px;}
+		.a:active{color: rgb(225,110,183);}
+		.b:active{color: rgb(225,110,183);}
+		.c:active{color: rgb(225,110,183);}
+		.d:active{color: rgb(225,110,183);}
+		
+		</style>
+		
+	</head>
+	<body >
+	<div>
+		<div class="shaoxiao">
+			<div class="shang1">
+				We wish you a
+			</div>
+			<div class="shang2">
+				<b>Merry&nbsp;Christmas&nbsp;ღ</b>
+			</div>
+			<DIV class="soccer">
+				<img src="img/images/头部图片.png" width="700px" height="400px" border="0" id="toubu">
+			</DIV>
+			<div class="main"><br /><br />
+				<div><img src="img/images/小图标_03.png" class="img" ></div>
+				<div><img src="img/images/小图标_03.png" class="img" ></div>
+				<div><img src="img/images/小图标_03.png" class="img" ></div>
+				<div><img src="img/images/小图标_03.png" class="img" ></div>
+			</div>
+			<div class><br />
+				<div class="a"><a href="origins.html" style="text-decoration: none;" target="_blank">Origins</a></div>
+				<div class="b"><a href="stories/s/s.html" style="text-decoration: none;" target="_blank">Stories</a></div>
+				<div class="c"><a href="stories/d/d.html" style="text-decoration: none;" target="_blank">Decorations</a></div>
+				<div class="d"><a href="songs.html" style="text-decoration: none;" target="_blank">Songs</a></div>
+			</div>
+			
+		</div>
+	</div>	
+	</body>
+	<script type="text/javascript"> 
+	
+	function snow() {
+            //  1、定义一片雪花模板
+            var flake = document.createElement('div');
+            // 雪花字符 ❄❉❅❆✻✼❇❈❊✥✺
+            flake.innerHTML = '❆';
+            flake.style.cssText = 'position:absolute;color:#fff;';
+
+            //获取页面的高度 相当于雪花下落结束时Y轴的位置
+            var documentHieght = window.innerHeight;
+            //获取页面的宽度，利用这个数来算出，雪花开始时left的值
+            var documentWidth = window.innerWidth;
+
+            //定义生成一片雪花的毫秒数
+            var millisec = 20;
+            //2、设置第一个定时器，周期性定时器，每隔一段时间（millisec）生成一片雪花；
+            setInterval(function() { //页面加载之后，定时器就开始工作
+                //随机生成雪花下落 开始 时left的值，相当于开始时X轴的位置
+                var startLeft = Math.random() * documentWidth;
+
+                //随机生成雪花下落 结束 时left的值，相当于结束时X轴的位置
+                var endLeft = Math.random() * documentWidth;
+
+                //随机生成雪花大小
+                var flakeSize = 5 + 20 * Math.random();
+
+                //随机生成雪花下落持续时间
+                var durationTime = 4000 + 7000 * Math.random();
+
+                //随机生成雪花下落 开始 时的透明度
+                var startOpacity = 0.7 + 0.3 * Math.random();
+
+                //随机生成雪花下落 结束 时的透明度
+                var endOpacity = 0.2 + 0.2 * Math.random();
+
+                //克隆一个雪花模板
+                var cloneFlake = flake.cloneNode(true);
+
+                //第一次修改样式，定义克隆出来的雪花的样式
+                cloneFlake.style.cssText += `
+                        left: ${startLeft}px;
+                        opacity: ${startOpacity};
+                        font-size:${flakeSize}px;
+                        top:-25px;
+                            transition:${durationTime}ms;
+                    `;
+
+                //拼接到页面中
+                document.body.appendChild(cloneFlake);
+
+                //设置第二个定时器，一次性定时器，
+                //当第一个定时器生成雪花，并在页面上渲染出来后，修改雪花的样式，让雪花动起来；
+                setTimeout(function() {
+                    //第二次修改样式
+                    cloneFlake.style.cssText += `
+                                left: ${endLeft}px;
+                                top:${documentHieght}px;
+                                opacity:${endOpacity};
+                            `;
+
+                    //4、设置第三个定时器，当雪花落下后，删除雪花。
+                    setTimeout(function() {
+                        cloneFlake.remove();
+                    }, durationTime);
+                }, 0);
+
+            }, millisec);
+        }
+        snow();
+
+
+	</script>
+	
+</html>

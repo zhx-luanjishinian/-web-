@@ -1,0 +1,330 @@
+/* 更改默认样式 */
+body,h1,h2,h3,h4,h5,h6,ol,ul,dl,dd,p,input,select,textarea,td{/*设置这些属性的页外边距和页内边距均为0*/
+	margin:0;
+	padding:0;
+}
+/* 设置p标签样式  */
+p{
+    margin:0px;
+    padding:0px;
+}
+/* 设置a标签样式 */
+a:link,a:hover, a:visited{
+    color: black;
+    text-decoration:  none;
+    /* border-bottom:    thin dotted #b76666; */
+}
+a:hover,a:active{
+    color: purple;/*鼠标悬停为紫色*/
+    font-weight: bold;
+}
+
+body {
+    /* 设置一张有纹理质感的背景图 */
+    background-image: url(../images/bg.png);
+    margin: 0;
+    font:12px/1 "\u5b8b\u4f53", Verdana,Helvetica,Arial, sans-serif;
+}
+
+div.inner { /*实现凝胶布局的关键代码*/
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 页眉区的CSS */
+header#head{
+    height: 100px;
+}
+
+header div.inner{
+    height: 100px;
+    background-color:rgb(224, 185, 185) ;
+}
+/* 头像与网站名称 */
+header div.inner #profile{
+    width: 500px;
+    height: 100px;
+    float:left;
+}
+/* 头像 */
+header div.inner #profile img.pro{
+    float:left;/*若不设置此行，则网站名称无法显示在头像右边*/
+    display:block;/*初始时显示*/
+    margin: 6px;
+    margin-left: 40px;
+    /*让头像显示成圆形*/
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+    border:3px solid rgb(172, 208, 243);/*给头像设置边框*/
+}
+
+header div.inner #profile img.pro2{
+    float:left;
+    display:none;/*初始时不显示*/
+    margin: 6px;
+    margin-left: 40.5px;/*第二张图较第一张图片更偏右*/
+    /*让头像显示成圆形*/
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+    border:3px solid rgb(172, 208, 243);/*给头像设置边框*/
+}
+/* 网站名称 */
+header div.inner #profile p{
+    font-weight:200;
+    font-size:2.8em;
+    margin-top:30px;
+    float:left;
+}
+/* 给网站名称添加伪类 */
+header div.inner #profile p:hover{
+    color: rgb(146, 134, 218);
+}
+
+/* 座右铭 */
+header div.inner #motto{
+    width: 500px;
+    height: 100px;
+    float:left;
+    text-align: right;/*文本右居中*/
+    
+}
+/* 英文座右铭 */
+header div.inner #motto p.english{
+    font-size:1.5em;
+    font-family: Harrington;
+    height: 45px;
+    margin: 10px 40px 0px ;/*覆盖p标签的原有样式*/
+}
+/* 中文座右铭 */
+header div.inner #motto p.chinese{
+    font-family: Simaun;
+    margin: 5px 40px 0px ;
+}
+/* 给座右铭添加伪类 */
+header div.inner #motto p.english:hover{
+    font-size:2em;
+}
+header div.inner #motto p.english:hover ,header div.inner #motto p.chinese:hover{/*注意要给逗号前，逗号后各加一个：hover*/
+    color: rgb(146, 134, 218);
+}
+
+
+/* 导航 */
+nav{
+    margin:5px auto;
+    height: 40px;
+    margin-bottom: 15px;
+    
+}
+
+nav div.inner{
+    height: 40px;/*这一行代码必须写，否则.inner对应的这块div只有宽度没有高度，无法显示出来*/
+    background-color:rgb(229, 199, 162) ;
+}
+
+nav ul{
+    margin: 0px; /* 与外界元素的距离为0 */
+    padding: 0px; /* 与内部元素的距离为0 */
+    height:40px;
+    list-style-type: none;/*去除列表标记*/
+    
+}
+
+nav ul li{
+    float:left; /* 将竖排变为横排 */
+    /*
+    值得注意的是，此处利用设置宽高来使导航文本均匀分布
+    若使用display:inline;也可以使得导航位于一横排，但是无法设置它的宽高，因为它变成了内联元素
+    */
+    height:40px;
+    width:250px;/*列表项的宽度与高度*/
+    text-align:center;
+    line-height:40px;/*上下左右居中*/
+    font-size: large;
+}
+
+nav ul li a:visited,nav ul li a:link{
+	color: #702a2a;
+    font-weight: bold;
+}
+nav ul li.selected {
+    background-color: #d3ad75;
+}
+nav ul li:hover{
+	background-color:#d1b387;
+}
+
+/* 采用表格布局,需要注意的是，表格布局时上下div的高度不会折叠 */
+div.tableContainer{
+    display: table;
+    border-spacing: 1px;
+}
+
+div.tableRow{
+    display: table-row;
+
+}
+
+div.tableCell{
+    display: table-cell;
+    vertical-align: top;
+}
+/* 内容区，为表格布局 */
+div.inner-container{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.container div.about{
+    width:245px;
+    height: 600px;
+    border:2px solid rgb(181,167,137);
+    background-color: rgb(239,229,208);
+    /* border-radius: 10px; */
+}
+
+div.container div.connect{
+    /* width:690px; */
+    height: 600px;
+    border:2px solid rgb(181,167,137);
+    background-color: rgb(239,229,208);
+    font-size:15px;
+    padding:20px;/*内容与边框的距离*/
+    /* border-radius: 10px; */
+}
+
+/* 左侧文章导航列 */
+/*参考了学校网页管理部门的左侧菜单列*/
+div.container div.about ul.article{
+    height:75px;
+    line-height: 75px;
+    text-indent: 20px;/*文本缩进*/
+    list-style-type:none;
+    font-size:large;
+    font-weight:bold;
+    /* font-family: Simsun; */
+}
+div.container div.about ul.article li{
+    margin-top: 10px;
+    margin-left:10px;
+    margin-right:10px;
+    border-bottom:1px solid rgb(216, 192, 192);
+    height:75px;/*设置文章导航列每项高度*/
+    
+}
+
+div.container div.about ul.article li.selected{
+    background: #d3ad75;
+    
+}
+
+div.container div.about ul.article li a{/*导航列字体颜色*/
+    color: #702a2a;  
+}
+
+
+div.container div.about ul.article li:hover a{  /*当文章导航列被碰到时，a内元素的颜色*/
+    color:white !important;
+}
+div.container div.about ul.article li:hover{    /*鼠标悬停时变色，变的色彩与导航列一致*/
+    background-color:#d1b387;
+}
+
+/* 右侧文章内容区 */
+/* 文章标题 */
+div.container div.connect article h1 {
+    color:            #954b4b;
+    margin-bottom: 20px;
+    text-align: center;
+}
+/* 作者信息 */
+div.container div.connect article div.info{
+    text-align: center;/*居中*/
+    margin-bottom: 20px;
+}
+
+div.container div.connect article span {
+    font-style: italic;/*作者部分为斜体*/
+    font-weight: bold;
+}
+
+div.container div.connect article p {
+    text-indent: 2em;/*首行缩进2字符*/
+    margin-top:10px;
+    font-size: Simsun;
+    /* 让文章展示得更加舒服 */
+    letter-spacing:2px;/*设置字体间隔*/
+    line-height: 20px;/*设置行高*/
+    
+}
+
+div.container div.connect article p.headings {
+    text-align: center;
+    font-weight: bolder;
+    
+}
+
+/* 设置跳转“圣诞网页”链接处的格式 */
+div.container div.connect article p a.christmas{
+    font-family: Harrington;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* 设置活动照片的样式（表格布局） */
+table{
+    width:100%;/*设置表格宽度占满一行*/
+    border-spacing: 12px;
+}
+caption{
+    line-height:15px;
+    caption-side: bottom;
+    text-align: center;
+}
+/* 设置图片标题的样式 */
+div.container div.connect article table caption p.headings{/*精确定位增加权重*/
+    font-weight: normal;
+    font-size: 14px;
+    margin-top: 0px;
+}
+
+tr{
+    font-size:15px;
+}
+
+td{
+    vertical-align: top;
+    padding:3px;
+}
+/* 设置表格内的视频区样式 */
+
+td video.video1{
+    width: 313px;
+}
+
+td video.video2{
+    width: 670px;
+}
+/* 让照片、视频的四个角变得略微圆润 */
+td img,td video{
+    border-radius: 5px;
+    
+}
+
+/* 页脚 */
+footer{
+    margin-top: 15px;
+    height: 45px;
+    
+}
+
+footer div.inner{
+    margin:0px auto 10px auto;
+    height: 45px;/*这一行代码必须写，否则.inner对应的这块div只有宽度没有高度，无法显示出来*/
+    background-color:rgb(224, 185, 185) ;
+    text-align: center;/*文字水平居中*/
+    line-height: 45px;/*文字竖直居中*/
+
+}

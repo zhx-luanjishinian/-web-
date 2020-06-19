@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Origins</title>
+		<style>
+		body{
+		 	height:550px;width:1230px;
+		 	background:rgb(127,0,34);
+		 }
+		 .tubiao{
+		 	float: left;
+		 	line-height: 120px;
+		 	width: 130px;
+		 	text-align: center;
+		 	height: 100px;}
+		 .biaoti{
+		 	float:left;
+		 	line-height: 82px;	 
+			font-family: Harrington;
+			font-size: 50px;
+		}
+		.biaoti:hover{font-size: 55px;}
+		.biaoti:active{color:rgb(225,110,183);}
+		.side{width: 650px;
+		height:800px;
+		clear:left;
+		float: left;
+		}
+		#img1{margin: 0px;}
+		.right{
+			width: 510px;
+			height: 600px;
+			float: left;
+			font-family: "微软雅黑";
+			font-size: 20px;
+		} 
+		.right:hover{color: rgb(175,103,154);}
+		.right:active{color:rgb(225,110,183);}
+		</style>
+	</head>
+	<body>
+		<div class="tubiao">
+<img id="img" onmouseover="bigger()" onmouseout="smaller()" src="img/images/小图标2.png" /></div>
+		<div class="biaoti" >&nbsp;<a href="index.html" style="text-decoration: none;">Origins</a></div>
+		<div class="side" id = "lunbo">  
+        <ul">  
+            <li><img src="img/images/2.2.jpg" width="600px" height="600px"></li>  
+            <li><img src="img/images/2.1.jpg" width="600px" height="600px"></li>  
+            <li><img src="img/images/2.3.jpg" width="600px" height="600px"></li> 
+            <li><img src="img/images/2.4.jpg" width="600px" height="600px"></li>  
+        </ul>  
+		</div>
+		</div>
+		<div class="right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			12月25日，是基督教徒纪念耶稣诞生的日子，称为圣诞节。<br />
+　　			从12月24日于翌年1月6日为圣诞节节期。节日期间，各国基督教徒都举行隆重的纪念仪式。圣诞节本来是基督教徒的节日，由于人们格外重视，它便成为一个全民性的节日，是西方国家一年中最盛大的节日，可以和新年相提并论，类似我国过春节。<br />
+　　			圣诞习俗数量众多，如圣诞树，圣诞火腿，圣诞柴，冬青，槲寄生以及互赠礼物等。<br/>
+			西方人以红、绿、白三色为圣诞色，圣诞节来临时家家户户都要用圣诞色来装饰。红色的有圣诞花和圣诞蜡烛。绿色的是圣诞树。它是圣诞节的主要装饰品，用砍伐来的杉、柏一类呈塔形的常青树装饰而成。上面悬挂着五颜六色的彩灯、礼物和纸花，还点燃着圣诞蜡烛。
+			红色与白色相映成趣的是圣诞老人，他是圣诞节活动中最受欢迎的人物。西方儿童在圣诞夜临睡之前，要在壁炉前或枕头旁放上一只袜子，等候圣诞老人在他们入睡后把礼物放在袜子内。在西方，扮演圣诞老人也是一种习俗。<br />
+　　			圣诞卡，也是为维持远方亲朋好友关系的方式之一。许多家庭随贺卡带上年度家庭合照或家庭新闻，新闻一般包括家庭成员在过去一年的优点特长等内容。
+</div>
+	</body>
+	<script type="text/javascript"> 
+	var img = document.getElementById('img'); 
+	function bigger(){  img.style.width = '100px';  img.style.height = '100px'; } 
+	function smaller(){  img.style.width = '80px';  img.style.height = '80px'; }
+
+	var li=document.getElementById('lunbo').getElementsByTagName("li");
+    	var num=0;
+    	var len=li.length;
+ 
+    setInterval(function(){
+        li[num].style.display="none";
+        num=++num==len?0:num;
+        li[num].style.display="inline-block";
+ 
+	},1000);
+
+	</script>
+</html>

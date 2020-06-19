@@ -1,0 +1,415 @@
+body,h1,h2,h3,h4,h5,h6,ol,ul,dl,dd,p,input,select,textarea,td{/*设置这些属性的页外边距和页内边距均为0*/
+	margin:0;
+	padding:0;
+}
+/* 设置p标签样式  */
+p{
+    margin:0px;
+    padding:0px;
+}
+/* 设置a标签样式 */
+a:link,a:hover, a:visited{
+    color: black;
+    text-decoration:  none;
+    /* border-bottom:    thin dotted #b76666; */
+}
+a:hover,a:active{
+    color: purple;/*鼠标悬停为紫色*/
+    font-weight: bold;
+}
+
+body {
+    /* 设置一张有纹理质感的背景图 */
+    background-image: url(../images/bg.png);
+    margin: 0;
+    font:12px/1 "\u5b8b\u4f53", Verdana,Helvetica,Arial, sans-serif;
+}
+
+div.inner { /*实现凝胶布局的关键代码*/
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 页眉区的CSS */
+header{
+    height: 100px;
+}
+
+header div.inner{
+    height: 100px;
+    background-color:rgb(224, 185, 185) ;
+}
+/* 头像与网站名称 */
+header div.inner #profile{
+    width: 500px;
+    height: 100px;
+    float:left;
+}
+/* 头像 */
+header div.inner #profile img.pro{
+    float:left;/*若不设置此行，则网站名称无法显示在头像右边*/
+    display:block;/*初始时显示*/
+    margin: 6px;
+    margin-left: 40px;
+    /*让头像显示成圆形*/
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+    border:3px solid rgb(172, 208, 243);/*给头像设置边框*/
+}
+
+header div.inner #profile img.pro2{
+    float:left;
+    display:none;/*初始时不显示*/
+    margin: 6px;
+    margin-left: 40.5px;/*第二张图较第一张图片更偏右*/
+    /*让头像显示成圆形*/
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+    border:3px solid rgb(172, 208, 243);/*给头像设置边框*/
+}
+/* 网站名称 */
+header div.inner #profile p{
+    font-weight:200;
+    font-size:2.8em;
+    margin-top:30px;
+    float:left;
+}
+/* 给网站名称添加伪类 */
+header div.inner #profile p:hover{
+    color: rgb(146, 134, 218);
+}
+
+/* 座右铭 */
+header div.inner #motto{
+    width: 500px;
+    height: 100px;
+    float:left;
+    text-align: right;/*文本右居中*/
+    
+}
+/* 英文座右铭 */
+header div.inner #motto p.english{
+    font-size:1.5em;
+    font-family: Harrington;
+    height: 45px;
+    margin: 10px 40px 0px ;/*覆盖p标签的原有样式*/
+}
+/* 中文座右铭 */
+header div.inner #motto p.chinese{
+    font-family: Simaun;
+    margin: 5px 40px 0px ;
+}
+/* 给座右铭添加伪类 */
+header div.inner #motto p.english:hover{
+    font-size:2em;
+}
+header div.inner #motto p.english:hover ,header div.inner #motto p.chinese:hover{/*注意要给逗号前，逗号后各加一个：hover*/
+    color: rgb(146, 134, 218);
+}
+
+
+/* 导航 */
+nav{
+    margin:5px auto;
+    height: 40px;
+    
+}
+
+nav div.inner{
+    height: 40px;/*这一行代码必须写，否则.inner对应的这块div只有宽度没有高度，无法显示出来*/
+    background-color:rgb(229, 199, 162) ;
+}
+
+nav ul{
+    margin: 0px; /* 与外界元素的距离为0 */
+    padding: 0px; /* 与内部元素的距离为0 */
+    height:40px;
+    list-style-type: none;/*去除列表标记*/
+    
+}
+
+nav ul li{
+    float:left; /* 将竖排变为横排 */
+    /*
+    值得注意的是，此处利用设置宽高来使导航文本均匀分布
+    若使用display:inline;也可以使得导航位于一横排，但是无法设置它的宽高，因为它变成了内联元素
+    */
+    height:40px;
+    width:250px;/*列表项的宽度与高度*/
+    text-align:center;
+    line-height:40px;/*上下左右居中*/
+    font-size: large;
+}
+
+nav ul li a:visited,nav ul li a:link{
+	color: #702a2a;
+ 
+    font-weight: bold;
+}
+nav ul li.selected {
+    background-color: #d3ad75;
+}
+nav ul li:hover{
+	background-color:#d1b387;
+}
+
+
+/* 设置整个页面的描述区的样式 */
+div.desp{
+    text-indent: 2em;
+    font-size: 13px;
+    margin-top:3px;
+    padding: 3px;
+    line-height: 20px;
+    overflow: hidden;
+    font-weight: lighter ;
+    text-align: left;
+}
+
+/* 设置内容区的总高度 */
+div#container,div#container div.inner{
+    height: 840px;/*若不设置该块区域高度，则页脚会跑到上面来*/
+    margin-top:15px;
+}
+
+
+/* 相册区 */
+section#album{
+    margin:5px auto 0px auto;
+    height: 300px;
+    background-color: rgb(224, 185, 185) ;
+    border-radius: 10px;
+}
+
+section#album div#tableContainer{
+    display: table;
+	border-spacing: 10px;
+}
+
+section#album div#tableRow {
+	display: table-row;
+}
+
+section#album div#tableRow div#tableCell{
+    display: table-cell;
+    
+    width: 250px;
+    height: 280px;
+    vertical-align: top;
+}
+
+/* 我的生活页面的缩略图 ,类似一条条博文*/
+section#mylife{
+    height: 540px;
+    width: 700px;
+    /* background-color: saddlebrown; */
+    float:right;
+
+}
+
+/* 实现一条条博文的效果 */
+section#mylife div.article{
+    width:99%;
+	height:257px;
+    background-color:white;
+    /* 设置圆角效果（用两种方式是为了多个浏览器都支持） */
+	-webkit-border-radius: 10px;
+     border-radius: 10px;
+	 margin:10px auto;
+	 border:3px solid #F4F4F4;
+	 overflow:hidden;/*防止文本区内容溢出*/
+}
+/* 文章标题，作者信息居中 */
+section#mylife div.article div.art-title{
+    margin-left: 150px;
+    font-weight: bold;
+}
+ section#mylife div.article div.art-info {
+    text-align: center;
+}
+/* 段落标题居中且加粗 */
+section#mylife div.article div.desp p.headings {
+    text-align: center;
+    font-weight: bolder;
+}
+/* 左边的插图 */
+section#mylife div.article div.art-img{
+	float:left;
+    width:280px;
+    height:260px;
+	overflow:hidden;
+}
+
+section#mylife div.article div.art-img img{
+    width:250px;
+    height:240px;
+    margin:10px 15px;
+}
+/* 右侧的文字标题 */
+section#mylife div.article div.art-title{
+	float:left;
+    font-size:1.5em;
+   
+	padding-left:15px;
+	padding-top:8px;
+	color:#7A7A7A;
+}
+
+/* 右侧的作者信息 */
+section#mylife div.article div.art-info{
+    margin-top: 40px;
+
+}
+
+section#mylife div.article div.art-info ul{
+    list-style-type:none;
+    /* float:left; */
+
+}
+
+
+section#mylife div.article div.art-info ul li{
+    /* list-style-type:none; */
+    display: inline;
+    padding-left:15px;
+	padding-top:8px;
+
+}
+
+
+/* 边栏区 */
+aside{
+    height:540px;
+    width: 290px;
+    /* background-color: rgb(134, 26, 85); */
+    float:left;
+}
+
+/* 设置边栏组成块（搜索、关于作者、感悟心语）的样式 */
+aside div.aside-item{
+    height: 200px;
+    width:98%;
+	border:2px solid #F4F4F4;
+    margin:10px auto;
+	background:white;
+}
+/* 边栏标题 */
+aside div.aside-item header{
+    height: 30px;
+    border-right:4px solid rgb(235, 38, 38);/*添加右边的装饰框*/
+}
+
+aside div.aside-item header p{
+    margin-right: 10px;
+    text-align: right;
+    font-weight: normal;
+    font-size:20px;
+	line-height:30px;
+}
+
+aside div.aside-item header p:hover,aside div.aside-item header p a:hover{
+    color:purple;
+    font-weight: bolder;
+    
+}
+/* 设置"搜你想搜"的样式*/
+aside div#search{
+    height: 100px;
+}
+
+aside div#search form{
+    padding:10px; 
+} 
+
+aside div#search form input{
+    width:180px;
+    height:35px;
+    border:1px solid #f96535;
+    float:right;
+    margin-right: 35px;
+    padding:0px;/*为了和右边的按钮样式一致*/
+}
+aside div#search form p.submit{ 
+    width:35px;
+    height:35px;
+    margin-left:228px;
+    border-top:1px solid #f96535;
+    border-right:1px solid #f96535;
+    border-bottom:1px solid #f96535;
+    position:relative;
+    background-image: url(../images/search.png);
+}
+
+aside div#search form p.submit button{
+    width:35px;
+    height:35px;
+    position:absolute;/*相对父类绝对定位，保证该按钮在它该在的位置*/
+    background-color: transparent;
+    /* 对原有样式修改 */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    -ms-appearance: none;
+    cursor:pointer;
+    outline: none;
+    border: 0px;
+    padding:0px;
+    
+}
+
+aside div#search form input:focus {
+    width:220px;
+    border:1px solid #f96535 !important;
+}
+
+/* 设置"关于作者"的样式 */
+aside div#about div.aside-container{
+    font-size: 13px;
+    text-align: center;
+    margin-top: 10px;
+}
+aside div#about div.aside-container div.adult{
+    float:left;
+    width:80px;
+    height:80px;
+    margin-left: 10px;
+    background-color: red;
+    background-image: url(../images/adult.jpg);
+
+}
+
+aside div#about div.aside-container div.content{
+    float:left;
+    width:190px;
+    height:80px;
+    
+
+}
+aside div#about div.aside-container div.content p{
+    margin-top: 10px;
+}
+
+
+aside div#about div.aside-container div.desp{
+    height: 63px;
+}
+
+/* 页脚 */
+footer{
+    margin-top: 15px;
+    height: 45px;
+    
+}
+
+footer div.inner{
+    margin:10px auto;
+    height: 45px;/*这一行代码必须写，否则.inner对应的这块div只有宽度没有高度，无法显示出来*/
+    background-color:rgb(224, 185, 185) ;
+    text-align: center;/*文字水平居中*/
+    line-height: 45px;/*文字竖直居中*/
+
+}
+
+
+

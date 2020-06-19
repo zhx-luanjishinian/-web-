@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Songs</title>
+		<style type="text/css">
+		body{
+		 	height:550px;width:1230px;
+		 	background:rgb(127,0,34);
+		 }
+		 .tubiao{
+		 	float: left;
+		 	line-height: 120px;
+		 	width: 130px;
+		 	text-align: center;
+		 	height: 100px;}
+		 .biaoti{
+		 	float:left;
+		 	line-height: 82px;	 
+			font-family: Harrington;
+			font-size: 50px;
+		}
+		.biaoti:hover{font-size: 55px;}
+		.biaoti:active{color:rgb(225,110,183);}
+		.write{
+			clear: left;
+			float: left;
+			font-family: "微软雅黑";
+			font-size:25px ;
+		}
+		.music1:hover{color: rgb(175,103,154);font-size: 30px;}
+		.music2:hover{color: rgb(175,103,154);font-size: 30px;}
+	    .music3:hover{color: rgb(175,103,154);font-size: 30px;}
+	     p:hover{color: rgb(175,103,154);}
+	    .music1:active{color:rgb(225,110,183);}
+	    .music2:active{color:rgb(225,110,183);}
+	    .music3:active{color:rgb(225,110,183);}
+	    p:active{color:rgb(225,110,183);}
+		 	</style>
+	</head>
+	<body>
+		<div class="tubiao">
+	<img id="img" onmouseover="bigger()" onmouseout="smaller()" src="img/images/小图标2.png" /></div>
+	<div class="biaoti" >&nbsp;<a href="index.html" style="text-decoration: none;">Songs</a></div>
+	<div class="write">
+		<div class="music1"><h3 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;《Hark! Herald Angels Sing 》(天使在歌唱)</h3></div>
+    <p>
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;与圣诞的寂静不同，天使的报信让人世沸腾：这是和平之子，这是正义之光，<br />
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;基督的降生是为了拯救世俗的臣民，是为了给他们第二次生命。</p>
+       <audio src="Hark.mp3" controls="controls"></audio>
+        <div class="music2"><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;《White Christmas》</h3></div>
+    <p>
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;白色圣诞"根本已经和 圣诞节 画上等号的金曲，史上最为畅销的圣诞流行歌曲!”<br/>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     ——白色的雪花，白色的原野，圣诞老人的白胡子;圣诞卡片，圣诞祝福
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ——都在白色的圣诞节!<br />
+</p><audio src="Slient Night.mp3" controls="controls"></audio>
+       
+       <div class="music3"><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;《Slient night》</h3></div>
+    <p> 
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;说到圣诞歌曲,大概没有哪一首能比这首更"有名"更广为人知的了。
+    	<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这首脍炙人口的歌曲曲子动听,歌词优美,充满了一种属于天堂的安宁。</p><audio src="White.mp3" controls="controls"></audio>
+</div>
+	</body>
+	<script>
+	var img = document.getElementById('img'); 
+	function bigger(){  img.style.width = '100px';  img.style.height = '100px'; } 
+	function smaller(){  img.style.width = '80px';  img.style.height = '80px'; }
+
+	</script>
+</html>

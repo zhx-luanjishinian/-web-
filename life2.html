@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的生活</title>
+    <link rel="stylesheet" href="./css/life.css">
+
+     <!-- 主要用来实现头像的简单切换 -->
+     <script type="text/javascript">
+        function swap(val){
+        　　if(val=="pro"){
+        　　　　pro.style.display='block';//设置为显示
+        　　　　pro2.style.display='none';//设置为隐藏
+        　　}else if(val=="pro2"){
+            　 pro.style.display='none';
+        　　　  pro2.style.display='block';
+        　　}
+        }
+    </script>
+</head>
+<body>
+     <!-- 页眉区，用来放置头像与座右铭 -->
+     <header id="head">
+        <div class="inner">
+            <!-- 头像以及名称 -->
+            <div id="profile">
+                <!-- 这里定义了js实现头像的简单切换 -->
+                <img src="./images/profile.png" alt="" class="pro" id="pro" onmouseover="swap('pro2')" onmoucedown="swap('pro2')" onmouseup="swap('pro2')" onmouseout="swap('pro2')" ondblclick="swap('pro2')" >
+                <img src="./images/profile2.png" alt="" class="pro2" id="pro2" onmouseover="swap('pro')" onmoucedown="swap('pro')" onmouseup="swap('pro')" onmouseout="swap('pro')" ondblclick="swap('pro')" > 
+                <p>昊欣の小站</p>
+            </div>
+            <div id="motto">
+                <p class="english">Of course I won't try to pick the moon. <br/>I want the moon to come to me.</p>
+                <p class="chinese">我当然不会试图摘月，我要月亮奔我而来。</p>
+                <p class="chinese">——奥黛丽·赫本</p>
+            </div>
+        </div>
+    </header>
+    <!-- 导航区，对应四个页面 -->
+    <nav>
+        <div class="inner">
+            <ul class="">
+                <!-- 被选中的一项 -->
+				<li>
+					<a href="index.html" title="我的主页">我的主页</a>
+				</li>
+				<li>
+					<a href="resume.html" title="我的简历">我的简历</a>
+				</li>
+				<li class="selected">
+					<a href="life.html" title="我的生活">我的生活</a>
+				</li>
+				<li>
+					<a href="connect.html" title="与我联系">与我联系</a>
+				</li>  
+			</ul> 
+
+        </div>
+    </nav>
+
+    <div class="inner inner-container">
+        <div class="tableContainer container">
+            <div class="tableRow">
+                <div class="about tableCell">
+                    <!-- 文章导航列 -->
+                    <ul class="article"> 
+                        <li class=""> 
+                            <a href="life.html" title="荆门支教之行" class="" target="_self"><span class="column-name">荆门支教之行</span></a>   
+                        </li>
+                        <li class="selected"> 
+                            <a href="life2.html" title="邂逅文澜" class="" target="_self"><span class="column-name">邂逅文澜</span></a> 
+                        </li> 
+                    </ul>
+                </div>
+                <div class="connect tableCell">
+                    <article>
+                        <header>
+                            <h1><a href="life2.html">邂逅文澜</a></h1>
+                            <div class="info">
+                                <time datetime="2020-05-15 23:27">2020-05-15 23:27</time>&nbsp;&nbsp;
+                                <span>by 昊欣</span>
+                            </div>
+                        </header>
+                        <p>
+                            不知不觉，成为文澜网络的一份子已经近两年，我从什么也不懂的萌新成为了大二的师兄师姐，在部门的时光里，我收获了珍贵的友谊，也学会了不少技能。<br/>
+                        </p>
+                        <p class="headings">一、初识</p><!--p标签本身就会换行，不必多加换行-->
+                        <p>
+                            第一次知道文澜网络，是在成为大一新生的第一周。当时的我，对大学的一切都充满好奇，充满探寻与求知欲，什么都想体验，什么都想尝试。记得招新的时候，面对众多迎新的部门，我犹豫不决。一天下来，手里拿了不少招揽干事的传单，却并不知道自己喜欢什么、参加什么。那天回宿舍，我却被桌上的一张传单吸引了——《文澜网络技术部招贤纳士》。传单做的非常精美，每个部门负责的具体事宜，可以收获的技能都写的清清楚楚。其中，技术部的部门介绍最为幽默生动，作为一名信管专业的学生，“技术”两字便足够吸引人，既能在喜爱的部门里做事，又能认识到有共同兴趣爱好的朋友，还能获得一定的专业技能，何乐而不为呢？第二天我便联系了师兄师姐，向代码组递交了我的入职申请表。还记得文澜网络的宣讲会与信管院的宣讲会撞在了同一时间，我仔细抉择后参加文澜网络的会议——因为这正是我想去的。面试分为三轮——初试、复试、终试。初试和复试都是面试的形式，讲一讲自己关于的爱好，对技术的认知，对未来的打算等等。终试给了一周时间，学习网页的简单知识，限时修改某一个网页的样式。经过层层选拔，我通过了考核，很荣幸加入了这个大家庭。
+                        </p>
+                        <table>
+                            <caption><p class="headings">活动照片</p></caption>
+                            <tr>
+                                <td>
+                                    <img src="./images/life2-1.png" alt="">
+                                </td>
+                                <td>
+                                    <img src="./images/life2-2.png" alt="">
+                                </td>
+                            </tr>
+                        </table>
+                        <br/>
+                        <!--此处多写一个换行-->
+                        <p class="headings">二、相遇相知</p>
+                        <p>
+                            回想这两年的时光，部门带给了我非常非常多。在文澜技术部，我认识了我最好的朋友——苏静微。她是工商学院的学生，进入代码组是她对自我的一次探索与尝试。由于大一与大二不在同一校区，开会时需要搭城际往返，我们便彼此结伴相行，原本孤单的旅程变得充实而愉快。我们俩的成长环境不同，对人生也拥有不同视角的理解与体会，和她的交谈敞开了心扉、开拓了视野。疫情期间，我们仍然经常聊天，彼此的友谊不减反增。除了友情，自然便是学业方面的督促，师兄师姐也是信管院的，结识他们就像是结识有经验的前辈。在师兄师姐的指导下，我的网页编程水平提高了很多。并且不仅仅是网页编程，在其他课业、赛事经验、学习方法方面师兄师姐也帮了我很多。还记得大一的暑假，收到师姐的贺卡和苹果时，内心不知道多么开心。   
+                        </p>
+                        <p>
+                            在大一下学期，我与部门里的其他四位同学一起完成了<a href="./christmas——大一下作品/index.html" target="_blank" class="christmas">圣诞节网页</a>的编写，两位同学负责ps界面设计，三位同学负责html网页实现。我主要实现了<a href="./christmas——大一下作品/index.html" target="_blank" class="christmas">首页</a>、
+                            <a href="./christmas——大一下作品/origins.html" target="_blank" class="christmas">Origins</a>并合作完成了<a href="./christmas——大一下作品/songs.html" target="_blank" class="christmas">Songs</a>。现在看来网页的漏洞非常多，比如将css样式写在了html内部，样式单一且命名复杂等等，但仍然觉得十分开心，因为代码是自己认认真真写的，每每打开网页自豪之情都会涌上心头。
+                        </p>
+                        <table>
+                            <caption><p class="headings">我参与的文澜网络迎新视频</p></caption>
+                            <tr>
+                                <td >
+                                    <video muted src="./images/life2.mp4" controls class="video2">
+                                        对不起，您的浏览器不支持该视频标签！
+                                    </video>
+                                </td>
+                            </tr>
+                        </table>
+                        <!--此处多写一个换行-->
+                        <br/>
+                        <p class="headings">三、尾声</p>
+                        <p>
+                            大二即将结束，前段时间师兄问我留部吗，我斟酌之后决定不留下。大三的我会将重心更多地放在学习、比赛上，所以不再参与部门的事情了。虽然我即将不再是文澜技术部的一份子，但我的心仍然是文澜的，我与文澜网络技术部的故事远远没有结束……
+                        </p>
+                        <br/>
+                        <!--此处多写一个换行-->
+                    </article>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="inner">
+            <p>
+                <a href="index.html">
+                    Copyright©昊欣の小站 All Rights Reserved.
+                </a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

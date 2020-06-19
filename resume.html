@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的简历</title>
+    <link rel="stylesheet" href="./css/resume.css">
+
+     <!-- 主要用来实现头像的简单切换 -->
+     <script type="text/javascript">
+        function swap(val){
+        　　if(val=="pro"){
+        　　　　pro.style.display='block';//设置为显示
+        　　　　pro2.style.display='none';//设置为隐藏
+        　　}else if(val=="pro2"){
+            　 pro.style.display='none';
+        　　　  pro2.style.display='block';
+        　　}
+        }
+    </script>
+</head>
+<body>
+     <!-- 页眉区，用来放置头像与座右铭 -->
+     <header>
+        <div class="inner">
+            <!-- 头像以及名称 -->
+            <div id="profile">
+                <!-- 这里定义了js实现头像的简单切换 -->
+                <img src="./images/profile.png" alt="" class="pro" id="pro" onmouseover="swap('pro2')" onmoucedown="swap('pro2')" onmouseup="swap('pro2')" onmouseout="swap('pro2')" ondblclick="swap('pro2')" >
+                <img src="./images/profile2.png" alt="" class="pro2" id="pro2" onmouseover="swap('pro')" onmoucedown="swap('pro')" onmouseup="swap('pro')" onmouseout="swap('pro')" ondblclick="swap('pro')" > 
+                <p>昊欣の小站</p>
+            </div>
+            <div id="motto">
+                <p class="english">Of course I won't try to pick the moon. <br/>I want the moon to come to me.</p>
+                <p class="chinese">我当然不会试图摘月，我要月亮奔我而来。</p>
+                <p class="chinese">——奥黛丽·赫本</p>
+            </div>
+        </div>
+    </header>
+    <!-- 导航区，对应四个页面 -->
+    <nav>
+        <div class="inner">
+            <ul class="">
+                <!-- 被选中的一项 -->
+				<li>
+					<a href="index.html" title="我的主页">我的主页</a>
+				</li>
+				<li  class="selected">
+					<a href="resume.html" title="我的简历">我的简历</a>
+				</li>
+				<li>
+					<a href="life.html" title="我的生活">我的生活</a>
+				</li>
+				<li>
+					<a href="connect.html" title="与我联系">与我联系</a>
+				</li>  
+			</ul> 
+
+        </div>
+    </nav>
+
+    <div class="inner inner-container">
+        <div class="tableContainer container">
+            <div class="tableRow">
+                <div class="about tableCell">
+                    <!-- 简历导航区 -->
+                    <div class="bd"></div><!--对应边栏线-->
+                    <div class="basic">
+                        <div class="prof">
+                            <img src="./images/name.png" alt="">
+                            <h1><a href="resume.html">郑昊欣</a></h1>
+                        </div>
+                        <table>
+                            <tr>
+                                <td>
+                                    <img src="./images/resume-1.png" alt="" class="desp">
+                                </td>
+                                <td class="desp">生日：</td>
+                                <td>2000.01.17</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="./images/resume-2.png" alt="" class="desp">
+                                </td>
+                                <td class="desp" >学历：</td>
+                                <td>全日制本科</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="./images/resume-3.png" alt="" class="desp">
+                                </td>
+                                <td class="desp" >方向：</td>
+                                <td>数据分析/人工智能</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="./images/resume-4.png" alt="" class="desp">
+                                </td>
+                                <td class="desp" >手机：</td>
+                                <td>13277096650</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="./images/resume-5.png" alt="" class="desp">
+                                </td>
+                                <td class="desp" >邮箱：</td>
+                                <td>1291103474@qq.com</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="connect tableCell">
+                    <!-- 简历内容区 -->
+                    <table>
+                        <!-- 教育背景 -->
+                        <tr class="title">
+                            <td class="img" colspan="2">
+                                <img src="./images/resume-6.png" alt="" >
+                                <h1><a href="resume.html">教育背景</a></h1>
+                            </td>
+                        </tr>
+                        <tr class="conte">
+                            <td class="timeline">
+                                2018.09至今
+                            </td>
+                            <td class="desp">
+                                <p>中南财经政法大学   信息管理与信息系统专业</p>
+                            </td>
+                        </tr>
+                        <tr class="conte">
+                            <td class="timeline" width="20%">
+                                主修课程：
+                            </td>
+                            <td class="desp">
+                                <p>数据结构、投资学、操作系统原理、数据库系统原理、
+                                    Java程序设计、程序设计、文献信息检索与利用、离散数学、线性代数、概率论与数理统计分析、高等数学等</p>
+                            </td>
+                        </tr>
+
+                        <!-- 项目经验 -->
+                        <tr class="title">
+                            <td class="img" colspan="2">
+                                <img src="./images/resume-7.png" alt="" >
+                                <h1><a href="resume.html">项目经验</a></h1>
+                            </td>
+                        </tr>
+                        <tr class="conte">
+                            <td class="timeline">
+                                2019.07——2019.08
+                            </td>
+                            <td class="desp category">志愿服务类</td>
+                        </tr>
+                        <tr class="conte">
+                            <td class="desp desp_p" colspan="2">
+                                <p>参与2019年荆门返乡支教活动，在沙洋县刘淌村做志愿老师</p>
+                            </td>
+                        </tr>
+                        <tr class="conte">
+                            <td class="timeline">
+                                2018.09至今
+                            </td>
+                            <td class="desp category">科研、实践类</td>
+                        </tr>
+                        <tr class="conte">
+                            <td class="desp desp_p" colspan="2">
+                                <ol>
+                                    <li>2020年大学生创新创业训练项目（创业训练类）项目《智“汇”食堂——优化卫生防控的高校食堂智能配餐平台》获省级立项</li>
+                                    <li>2020年华为财务精英挑战赛“快乐百分百队”获最佳人气奖</li>
+                                    <li>主要负责的《基于CNN--RNN模型优化的MAGF框架下对短视频流行音乐的AI生成研究》获第30届博文杯立项</li>    
+                                    <li>主要负责的《基于“绿色发展“理念的校园荒地认养小程序——以中南财经政法大学为例》获安环杯三等奖</li>    
+                                    <li>2019年暑期社会实践《“互联网+”背景下农村电商物流“最后一公里”现状调研——以湖北荆门为例》立项现已结项</li>    
+                                    <li>2019年《光影流年——宿舍视频创意大赛》二等奖</li>
+                                </ol>
+                              
+                            </td>
+                        </tr>
+
+                         <!-- 在校经历 -->
+                         <tr class="title">
+                            <td class="img" colspan="2">
+                                <img src="./images/resume-8.png" alt="" >
+                                <h1><a href="resume.html">在校经历</a></h1>
+                            </td>
+                        </tr>
+                        <tr class="conte">
+                            <td class="timeline">
+                                2018.09——2019.09
+                            </td>
+                            <td class="desp category">校党委文澜网页技术部</td>
+                        </tr>
+                        <tr class="conte">
+                            <td class="desp desp_p" colspan="2">
+                                <p>负责页面设计，网页编写等</p>
+                            </td>
+                        </tr>
+                        <tr class="conte">
+                            <td class="timeline">
+                                2018.09——2019.09
+                            </td>
+                            <td class="desp category">校志愿者协会新媒体中心 </td>
+                        </tr>
+                        <tr class="conte">
+                            <td class="desp desp_p" colspan="2">
+                                <p>负责志协推文、新闻稿的撰写</p>
+                            </td>
+                        </tr>
+
+                        <!-- 证书荣誉 -->
+                        <tr class="title">
+                            <td class="img" colspan="2">
+                                <img src="./images/resume-9.png" alt="" >
+                                <h1><a href="resume.html">证书荣誉</a></h1>
+                            </td>
+                        </tr>
+                        <tr class="conte">
+                            <td class="timeline">
+                                通用技能证书：
+                            </td>
+                            <td class="desp">
+                                <p>英语四级证书、普通话一级乙等证书</p>
+                            </td>
+                        </tr>
+                        <tr class="conte">
+                            <td class="timeline" width="20%">
+                                专业技能证书：
+                            </td>
+                            <td class="desp">
+                                <p>Office计算机二级证书</p>
+                            </td>
+                        </tr>
+                        <tr class="conte">
+                            <td class="timeline" width="20%">
+                                活动荣誉奖励：
+                            </td>
+                            <td class="desp desp_p">
+                                <ul>
+                                    <li>2020年五四表彰获“校级优秀志愿者”，“院级优秀共青团员”称号</li>
+                                    <li>2018年-2019年度优秀学生奖学金获得者</li>
+                                    <li>2019年8月荆门支教获“优秀志愿者标兵”称号</li>    
+                                    <li>2019年五四表彰获“校级优秀共青团员”，“院级优秀志愿者”称号</li>    
+                                </ul>
+                            </td>
+                        </tr>
+
+                        <!-- 自我评价 -->
+                        <tr class="title">
+                            <td class="img" colspan="2">
+                                <img src="./images/resume-10.png" alt="" >
+                                <h1><a href="resume.html">自我评价</a></h1>
+                            </td>
+                        </tr>
+                        <tr class="conte">
+                            <td class="desp" colspan="2">
+                                <p>具有良好的组织管理能力，担任过博文等比赛的负责人，具备一定的活动策划和组织协调能力。是一名入党积极分子，吃苦耐劳，对自己的生活与学习抱有热情，面对困难与挑战毫不畏惧。具有良好的学习能力，善于制定切实可行的学习计划，成绩稳定且不断提高着。</p>
+                            </td>
+                        
+                        </tr>
+                        
+                    </table>
+                   
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="inner">
+            <p>
+                <a href="index.html">
+                    Copyright©昊欣の小站 All Rights Reserved.
+                </a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
